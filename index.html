@@ -13,18 +13,21 @@
             height: 100vh;
             margin: 0;
             font-family: Arial, sans-serif;
+            flex-direction: column; /* Align items in a column */
         }
 
-        #formContainer {
+        #formContainer,
+        #tableContainer {
             text-align: left;
+            margin: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 20px;
+            border: 1px solid #ccc;
         }
 
         form {
             display: inline-block;
-            border: 1px solid #ccc;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         label {
@@ -46,9 +49,6 @@
             border: 1px solid #ddd;
             padding: 12px;
             text-align: left;
-        }
-        label{
-            color: red;
         }
     </style>
 </head>
@@ -76,21 +76,23 @@
 </div>
 
 <!-- Table to display submitted data -->
-<table border="1" id="dataTable" class="data-table">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Password</th>
-      <th>Date of Birth</th>
-      <th>Accepted Terms</th>
-    </tr>
-  </thead>
-  <tbody id="dataTableBody"></tbody>
-</table>
+<div id="tableContainer">
+  <table border="1" id="dataTable" class="data-table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Password</th>
+        <th>Date of Birth</th>
+        <th>Accepted Terms</th>
+      </tr>
+    </thead>
+    <tbody id="dataTableBody"></tbody>
+  </table>
+</div>
 
 <!-- Include your JavaScript file -->
-<script src="index.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>
