@@ -1,10 +1,10 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
     // Retrieve saved data from web storage and populate the table if available
     const savedData = JSON.parse(localStorage.getItem('registrationData')) || [];
     populateTable(savedData);
   
     // Add event listener to the form for submission
-    document.getElementById('registrationForm').addEventListener('submit', function (event) {
+    document.getElementById('registrationForm').addEventListener('submit', function(event) {
       event.preventDefault();
   
       // Validate date of birth
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
         email: document.getElementById('email').value,
         password: document.getElementById('password').value,
         dob: dobInput.value,
-        acceptedTerms: document.getElementById('acceptedTerms').checked,
+        acceptedTerms: document.getElementById('terms').checked,
       };
   
       // Save data to web storage
