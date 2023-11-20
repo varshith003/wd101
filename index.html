@@ -1,98 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration Form</title>
-    
-    <style>
-        body {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-            font-family: Arial, sans-serif;
-            flex-direction: column; /* Align items in a column */
-        }
-
-        #formContainer,
-        #tableContainer {
-            text-align: left;
-            margin: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            padding: 20px;
-            border: 1px solid #ccc;
-        }
-
-        form {
-            display: inline-block;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 8px;
-        }
-
-        input, button {
-            margin-bottom: 16px;
-        }
-
-        table {
-            margin-top: 20px;
-            border-collapse: collapse;
-            width: 100%;
-        }
-
-        th, td {
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: left;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
 </head>
 <body>
+  <h1>Registration Form</h1>
+  <form id="REGISTRATION FORM">
+    <label for="Name">Name:</label>
+    <p><input type="text" id="name" required></p>
 
-<div id="formContainer">
-    <form id="registrationForm" class="registration-form">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required><br>
+    <label for="Email">Email:</label>
+    <p><input type="email" id="email" required></p>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br>
+    <label for="Password">Password:</label>
+    <p><input type="password" id="password" required></p>
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required><br>
+    <label for="DOB">Date of Birth:</label>
+    <p><input type="date" id="dob" required></p>
 
-        <label for="dob">Date of Birth:</label>
-        <input type="date" id="dob" name="dob" required><br>
+    <label for="Accepted terms">I accept the terms:</label>
+    <p><input type="checkbox" id="terms" required></p>
 
-        <label for="acceptedTerms">Accept Terms:</label>
-        <input type="checkbox" id="acceptedTerms" name="acceptedTerms" required><br>
+    <p><button type="Submit">Submit</button></p>
+  </form>
 
-        <button type="submit">Submit</button>
-    </form>
-</div>
-
-<!-- Table to display submitted data -->
-<div id="tableContainer">
-  <table border="1" id="dataTable" class="data-table">
+  <h2>REGISTRATION DATA</h2>
+  <table border="1">
     <thead>
       <tr>
         <th>Name</th>
         <th>Email</th>
         <th>Password</th>
-        <th>Date of Birth</th>
-        <th>Accepted Terms</th>
+        <th>Dob</th>
+        <th>Accepted terms?</th>
       </tr>
     </thead>
-    <tbody id="dataTableBody"></tbody>
+    <tbody id="dataTableBody">
+      <!-- Table body content will be dynamically populated using JavaScript -->
+    </tbody>
+
+   <script src="index.js"></script>
   </table>
-</div>
-
-<!-- Include your JavaScript file -->
-<script src="index.js"></script>
-
 </body>
 </html>
