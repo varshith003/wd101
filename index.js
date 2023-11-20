@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
         email: document.getElementById('email').value,
         password: document.getElementById('password').value,
         dob: dobInput.value,
-        acceptedTerms: document.getElementById('acceptedTerms').checked, // Corrected the ID here
+        acceptedTerms: document.getElementById('acceptedTerms').checked,
       };
   
       // Save data to web storage
@@ -53,7 +53,6 @@ document.addEventListener('DOMContentLoaded', function () {
           const cell = row.insertCell();
           cell.textContent = entry[column];
         });
-      });
-    }
-  });
-  
+      });
+    }
+  });
