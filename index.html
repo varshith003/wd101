@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Form</title>
+    
     <style>
         body {
             display: flex;
@@ -11,6 +12,7 @@
             justify-content: center;
             height: 100vh;
             margin: 0;
+            font-family: Arial, sans-serif;
         }
 
         #formContainer {
@@ -19,18 +21,41 @@
 
         form {
             display: inline-block;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         label {
-            color: orange; 
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input, button {
+            margin-bottom: 16px;
+        }
+
+        table {
+            margin-top: 20px;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        label{
+            color: red;
         }
     </style>
 </head>
 <body>
 
 <div id="formContainer">
-    <h1>Registration Form</h1>
-    <form id="registrationForm">
+    <form id="registrationForm" class="registration-form">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required><br>
 
@@ -50,6 +75,21 @@
     </form>
 </div>
 
+<!-- Table to display submitted data -->
+<table border="1" id="dataTable" class="data-table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Password</th>
+      <th>Date of Birth</th>
+      <th>Accepted Terms</th>
+    </tr>
+  </thead>
+  <tbody id="dataTableBody"></tbody>
+</table>
+
+<!-- Include your JavaScript file -->
 <script src="index.js"></script>
 
 </body>
